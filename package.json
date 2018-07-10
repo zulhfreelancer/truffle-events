@@ -1,0 +1,11 @@
+{
+  "name": "truffle-events",
+  "version": "0.0.1",
+  "description": "\"A simple utility library to form a transaction for deep event testing i.e. 'approveAndCall' function. Works best with 'truffle-assertions' library (https://yarnpkg.com/en/package/truffle-assertions).",
+  "main": "index.js",
+  "author": "Zulhilmi Zainudin <zulhfreelancer@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "abi-decoder": "^1.1.0"
+  }
+}
