@@ -1,5 +1,9 @@
 ## Truffle Events
 
+<center>
+  <img src="./images/img.jpeg" />
+</center>
+
 A simple utility library to form a transaction for deep event testing i.e. `approveAndCall` function. Works best with '[truffle-assertions](https://yarnpkg.com/en/package/truffle-assertions)' library.
 
 - [Yarn](https://yarnpkg.com/en/package/truffle-events)
