@@ -5,6 +5,10 @@
   "main": "index.js",
   "author": "Zulhilmi Zainudin <zulhfreelancer@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "url": "https://github.com/zulhfreelancer/truffle-events",
+    "type": "git"
+  },
   "dependencies": {
     "abi-decoder": "^1.1.0"
   }
