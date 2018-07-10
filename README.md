@@ -1,6 +1,6 @@
 ## Truffle Events
 
-A simple utility library to form a transaction for deep event testing i.e. 'approveAndCall' function. Works best with '[truffle-assertions](https://yarnpkg.com/en/package/truffle-assertions)' library.
+A simple utility library to form a transaction for deep event testing i.e. `approveAndCall` function. Works best with '[truffle-assertions](https://yarnpkg.com/en/package/truffle-assertions)' library.
 
 - [Yarn](https://yarnpkg.com/en/package/truffle-events)
 - [NPM](https://www.npmjs.com/package/truffle-events)
