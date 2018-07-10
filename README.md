@@ -11,7 +11,7 @@ If you are doing something like `approveAndCall` function, you might have events
 
 At first, I thought it was a Ganache [issue](https://github.com/trufflesuite/ganache/issues/833). But, after spending some time experimenting with it, I can confirm that this issue was not only happened in Ganache. It happened in Geth too.
 
-After some research, I found [this answer](https://ethereum.stackexchange.com/a/48389/26362). That tells a lot. Only events that were emitted from the contract test scope will be returned.
+After some research, I found [this answer](https://ethereum.stackexchange.com/a/48389/26362). That explains a lot. Only events that were emitted from the contract test scope will be returned.
 
 For example:
 
