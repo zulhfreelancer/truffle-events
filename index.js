@@ -10,7 +10,8 @@ module.exports = {
   formTxObject: function(eventContract, eventIndex, transaction) {
     let abi = this.getAbi(eventContract);
     // wrap in an array because 'decodeLogs' expects an array
-    let log = [transaction.receipt.logs[eventIndex]];
+    let receipt = transaction.receipt;
+    let log     = [receipt.logs[eventIndex] || receipt.rawLogs[eventIndex]];
     abiDecoder.addABI(abi);
 
     let _decoded   = abiDecoder.decodeLogs(log);
