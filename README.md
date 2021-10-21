@@ -78,10 +78,10 @@ The magic:
 
 ```
 // all 3 arguments are required
-truffleEvent.formTxObject('ContractName', eventIndex, txScope);
+truffleEvent.formTxObject(contractABI, eventIndex, txScope);
 
 // example based on 2 contracts above
-var barScope = truffleEvent.formTxObject('Bar', 1, fooScope);
+var barScope = truffleEvent.formTxObject(barInstance.abi, 1, fooScope);
 ```
 
 Test example:
@@ -90,11 +90,16 @@ Test example:
 var truffleAssert = require('truffle-assertions');
 var truffleEvent  = require('truffle-events');
 
+const Foo = artifacts.require("Foo");
+const Bar = artifacts.require("Bar");
+
 // code omitted for brevity
 
-it("Foo#doSomethingExtra", async function(){
+it("Foo#doSomethingExtra", async function() {
+  f = await Foo.deployed();
+  b = await Bar.deployed();
   var fooScope = await f.doSomethingExtra(b.address);
-  var barScope = truffleEvent.formTxObject('Bar', 1, fooScope);
+  var barScope = truffleEvent.formTxObject(Bar.abi, 1, fooScope);
 
   truffleAssert.eventEmitted(fooScope, 'LogNumber', (ev) => {
     return ev.number == 100;
